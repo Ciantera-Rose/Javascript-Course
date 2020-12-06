@@ -10,6 +10,7 @@ JavaScript Arithmetic Operators
 
 2 ** 10; // 1024
 
+//Even numbers will always return 0. Great for finding even or odd numbers
 5 % 2; // 1
 
 10 % 2;

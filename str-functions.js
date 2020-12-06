@@ -85,6 +85,11 @@ str.replace('fox', 'wolf');
 //'The quick brown fox jumped over the lazy dog'  
 // 20
 
+ str.search('jumped');  
+//'The quick brown fox jumped over the lazy dog'  
+// 20
+
+//.search() and .indexOf() both find the index of the first char of the argument
 
  var str2 = str.concat(' again and again');
 // 'The quick brown fox jumped over the lazy dog again and again'
@@ -108,6 +113,7 @@ str.slice(10);
 str.charAt(10);
 "b". //slices character
 
+//.slice() grabs all the items to the right of argument
 str.slice(-8);
 //'The quick brown fox jumped over the lazy dog'
 "lazy dog"

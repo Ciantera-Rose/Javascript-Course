@@ -30,8 +30,9 @@ parseInt('55555555 is my phone number');
 //555555555
 
 parseInt('foo 55555555 is my phone number');
-//Nan
+//Nan = Not a number
 
+//Unary Operator is +
 + ageTwo;
 //33
 

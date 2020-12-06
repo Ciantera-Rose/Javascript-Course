@@ -29,10 +29,27 @@ console.log(user.grades); //Returns all key/value pairs
 console.log(user.grades.math); //Returns 90
 
 console.log(user.grades.coding = 99;) //Adds new key/value pair to dict
-
-
 user.age = 13;
 user.grades.coding = 95;
+
+
+/*
+var user = { 
+  name: 'Cian', 
+  age: 33,
+  city: 'Brooklyn',
+  emails: {
+    gmail: '@gmail.com',
+    yahoo: '@yahoo.com',
+    apple: '@icloud.com',
+  }
+}
+
+user.emails.university = '@edu';
+
+console.log(user.emails); 
+*/
+
 
 //Remember to use commas after each key value pair
 //Can ceate an object with multipe values and call on them
