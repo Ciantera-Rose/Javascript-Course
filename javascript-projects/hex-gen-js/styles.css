@@ -1,0 +1,92 @@
+
+html {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.header-wrapper {
+    font-family: 'Baloo Chettan 2', cursive;
+    color: #4396ef;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.4em;
+    font-weight: bold;
+    background-color: white;
+    padding-left: 200px;
+    height: 100px;
+    margin: -8px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 265px;
+    min-height: calc(100vh - 612px);
+  }
+
+.bg {
+    display: flex;
+    justify-content: center;
+    font-family: 'Baloo Chettan 2', cursive;
+    background-color: black;
+    font-size: 1.3em;
+    color: white;
+    margin-left: 470px;
+    margin-right: 470px;
+    padding-bottom: 17px;
+    padding-top: 12px;
+    border-radius: 7px;
+} 
+
+button {
+    background-color: #fbff07f8 ;
+    border-radius: 11px;
+    border: 2px double #0c0202;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 40px;
+}
+
+button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.8s;
+}
+
+button:hover {
+    background-color: #53fd28;
+}
+
+button:hover span {
+    padding-right: 25px;
+
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button {
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+ h3 {
+     margin: 0px;
+
+ }
+.footer-wrapper  {
+    background-color: white;
+    color: white;
+    height: 240px;
+    margin: -8px;
+
+}
+   
+
