@@ -11,6 +11,6 @@ const hexFlipper = () => {
     color.innerHTML = "Background Color: #" + randomColor;
   }
   
- btn.addEventListener("click", hexFlipper); 
+ btn.addEventListener("click", hexFlipper);
  hexFlipper();
 
