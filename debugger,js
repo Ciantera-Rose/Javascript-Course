@@ -1,0 +1,5 @@
+//Overview of the JavaScript Debugger
+
+/*
+The Javascript debugger gives us the ability to stop our program in different parts of its execution life cycle. Allows you to be able to ask your program questions as you build and go along to find out why you may not be getting your desired output. It also shows you what your program is doing while it’s executing and may better allow you to see or catch errors in your logic.
+*/

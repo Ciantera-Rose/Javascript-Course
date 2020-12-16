@@ -2,7 +2,7 @@ Overview of JavaScript Ternary Operator
 
 //Ternary Op allows you to write a condtion on a single line
 //Very important for real world front end applications
-//For Ternary's you hhave to have the else block
+//For Ternary's you have to have the else block
 
 <div className={hasPermission ? 'active' : 'disabled'}>
 </div>
@@ -26,16 +26,17 @@ function ageVerification(age) {
 ageVerification(15)
 ageVerification(55)
 
+//condition ? exprIfTrue : exprIfFalse
+
 //New example
 function adminControls(user) {
     if (user) {
         if (user.admin) {
             console.log('showing admin controls...');
-
-          } else {
+        } else {
             console.log('you need to be an admin');
-          }
-         } else {
+        }
+    } else {
         console.log('you need to be logged in');
     }
 }

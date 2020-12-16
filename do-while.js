@@ -1,7 +1,5 @@
 //Guide to While and Do/While Loops in JavaScript
 
-
-
 var players = [
   'Altuve',
   'Bregman',

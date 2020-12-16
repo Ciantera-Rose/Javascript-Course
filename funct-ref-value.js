@@ -22,7 +22,7 @@ someUser;
 //Side effect
 
 //SO when you pass an object in as an argument it's treated as a reference
-//The function is going to go and look at thhe reference to the object
+//The function is going to go and look at the reference to the object
 
 //If you want to pass in an object just pass in the actual value itself
 function nameFormatter (user) {
