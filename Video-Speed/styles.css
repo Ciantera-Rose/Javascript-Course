@@ -1,0 +1,22 @@
+
+
+.speed-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.speed-list li {
+	color: var(--main);
+	padding: 8px;
+    cursor: pointer;
+}
+
+.speed-list li:hover,
+.speed-list li.active {
+	color: var(--accent);
+    font-weight: bold;
+}
