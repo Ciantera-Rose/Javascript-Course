@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .activeHeading {
+      color: firebrick;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    .nonActiveHeading {
+      color: cornflowerblue;
+      font-size: 4em;
+      cursor: pointer;
+    }
+  </style>
+
+<body>
+    <div id="mainHeading" class="nonActiveHeading">
+        Hi there
+      </div>
+    
+</body>
+<script>
+    const heading = document.getElementById('mainHeading');
+    console.log('I was clicked!');
+    
+    heading.onclick = () => {
+    if (heading.classList.contains('activeHeading')) {
+      heading.classList.remove('activeHeading');
+      heading.classList.add('nonActiveHeading');
+    } else {
+      heading.classList.add('activeHeading');
+      heading.classList.remove('nonActiveHeading');
+    }
+}
+    //If you don't have other class names you might override then this is anothher way
+    /*
+    heading.onclick = () => {
+    if (heading.classList.contains('activeHeading')) {
+      heading.className = 'nonActiveHeading';
+    } else {
+      heading.className = 'activeHeading';
+    };
+  }
+  */
+</script>
+</html>
