@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<body>
+  <div class="widget">
+    <input type="text" id="chat-input">
+    <button id="msgBtn" onclick="sendMessage()">Submit</button>
+    <button onclick="clearMessages()">Clear Messages</button>
+    <!-- <div>Third Mesage</div> -->
+    <!-- <div>Second Mesage</div> -->
+    <!-- <div>First Mesage</div> -->
+    <div class="chat-wrapper"></div>
+  </div>
+</body>
+
+<script>
+  function sendMessage() {
+      console.log('Click button functional'); //Console Checkpoint
+    const newDiv = document.createElement("div"); // Created new div: <div>  </div>
+    newDiv.classList.add('chatMsg'); //Added class='chatMsg' to div:  <div class='chatMsg'></div>
+    let chatInput = document.querySelector('#chat-input').value;
+    console.log(chatInput); //Console Checkpoint: Accepts user input value. (ie [input] = "Hey")
+    const newContent = document.createTextNode(chatInput); //Creates textNode and passes in user input value
+    newDiv.appendChild(newContent); //Adds user input value to content. Slides into new div: <div>Hey</div>
+    
+    const widget = document.querySelector(".widget");
+    let chatWrapper = document.querySelector("chat-wrapper"); //A place to store chat in DOM
+    document.querySelector('#chat-input').value = ''; //Makes sure when you hit submit that it clears out button
+    
+    if (document.querySelectorAll('.chatMsg').length > 0) { //Grabbing all elements of: <div class='chatMsg'></div>
+      chatWrapper = document.querySelectorAll('.chatMsg')[0]; //
+    }
+    widget.insertBefore(newDiv, chatWrapper); //Gets it working. <div>First Mesage</div> <div>Second Message</div>  <div>Third Message</div>
+  }
+
+  function clearMessages() {
+    const messages = document.querySelectorAll('.chatMsg');  //Grabs messages and grabs all elements
+    messages.forEach(el => el.remove()); //Iterate over message elements and removes divs from DOM so they no longer exist
+  }
+
+</script>
+
+</html>

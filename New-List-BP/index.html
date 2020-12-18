@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+
+  <style>
+    .todoItem:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="todos">
+    <h2>Pending Todos</h2>
+    <ul> <!--Remove list item from DOM and add to Completed Todo List-->
+      <li class="todoItem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, animi.</li>
+      <li class="todoItem">Numquam dolor quo alias nam vel voluptates magni magnam quisquam.</li>
+      <li class="todoItem">Recusandae eaque quisquam facere ab reprehenderit cupiditate magni placeat quis?</li>
+      <li class="todoItem">Expedita asperiores nam saepe voluptatem, nostrum aliquid debitis quam recusandae.</li>
+      <li class="todoItem">Quaerat velit deserunt reprehenderit, vel placeat impedit accusamus non, deleniti!</li>
+    </ul>
+  </div>
+
+  <h2>Completed Todos</h2>
+  <ul class="completedTodoWrapper"> 
+    <div class="completed"></div> <!--Empty ul to place in each one of the items dynamically inside of Todo wrapper-->
+  </ul>
+</body>
+
+<script>
+    //Create and remove elements based on an event in JS
+    //Place items dynamically inside ul
+  const todos = document.querySelectorAll('.todoItem'); //Grabs todo values from todoItem class
+  const completedTodos = document.querySelector('.completed'); //Class of todos that have been completed
+  const completedTodoWrapper = document.querySelector('.completedTodoWrapper'); //Create and call completed TODO wrapper
+  
+   //Iterate through the todos. Grab a single Todo and add Event lister that listens for click and gives us an event
+  todos.forEach(todo => todo.addEventListener('click', (event) => {
+    let completedTodo = document.createElement('li'); //Let so they can be reassigned. Create li tag and store inside completed todo
+    let todoContent = document.createTextNode(todo.textContent); //Gets todo content and stores content in variable
+    completedTodo.appendChild(todoContent); //Checks for completed todo and appends child (placing todo content inside of completed todo list)
+    completedTodoWrapper.insertBefore(completedTodo, completedTodos); //Add div todo to completed todos
+    todo.remove(); //Removes item completely from DOM list and creates a new DOM node div and adds into completed todos 
+  }))
+</script>
+
+</html>
